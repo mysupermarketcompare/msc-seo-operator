@@ -1,0 +1,8 @@
+https://www.gocompare.com/sitemap.xml
+https://www.confused.com/sitemap.xml
+https://www.comparethemarket.com/sitemap.xml
+https://www.moneysupermarket.com/sitemap.xml
+https://www.money.co.uk/sitemap.xml
+https://www.finder.com/uk/sitemap.xml
+https://www.nerdwallet.com/uk/sitemap.xml
+https://www.uswitch.com/sitemap.xml

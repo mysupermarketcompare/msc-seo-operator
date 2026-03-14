@@ -1,0 +1,174 @@
+{
+  "car-insurance": {
+    "young-drivers": {
+      "label": "Young Drivers Car Insurance",
+      "members": [
+        "17-year-olds",
+        "new-drivers",
+        "student-car-insurance",
+        "young-drivers-car-insurance",
+        "learner"
+      ]
+    },
+    "older-drivers": {
+      "label": "Older & Senior Drivers",
+      "members": [
+        "over-50s",
+        "over-80s-car-insurance"
+      ]
+    },
+    "london": {
+      "label": "Car Insurance by Location",
+      "members": [
+        "manchester",
+        "northern-ireland",
+        "republic-of-ireland"
+      ]
+    },
+    "makes-and-models": {
+      "label": "Car Makes, Models & Vehicle Types",
+      "members": [
+        "classic-car-insurance",
+        "modified-car-insurance",
+        "performance-car-insurance",
+        "sports-cars",
+        "road-going-racing-cars",
+        "kit-cars",
+        "4x4-vehicles",
+        "american-cars",
+        "automatic-car-insurance",
+        "left-hand-drive-and-imports",
+        "cheapest-cars-to-insure"
+      ]
+    },
+    "electric-car-insurance": {
+      "label": "Green & Electric Vehicle Insurance",
+      "members": [
+        "hybrid-car-insurance",
+        "next-gen-cars"
+      ]
+    },
+    "comprehensive-car-insurance": {
+      "label": "Car Insurance Cover Types",
+      "members": [
+        "third-party-fire-and-theft",
+        "third-party-only-car-insurance",
+        "gap-insurance"
+      ]
+    },
+    "short-term": {
+      "label": "Short Term & Temporary Car Insurance",
+      "members": [
+        "90-day",
+        "test-drive-insurance",
+        "drive-away-insurance"
+      ]
+    },
+    "insuring-your-car-for-work-use": {
+      "label": "Car Insurance for Work & Business",
+      "members": [
+        "delivery-insurance",
+        "professional-sports-people"
+      ]
+    },
+    "multi-car-policies": {
+      "label": "Multi-Car & Additional Driver Insurance",
+      "members": [
+        "additional-driver-insurance",
+        "cover-to-drive-other-cars"
+      ]
+    }
+  },
+  "home-insurance": {
+    "flats": {
+      "label": "Flat & Apartment Insurance",
+      "members": [
+        "flat-insurance",
+        "flat-roof-home-insurance"
+      ]
+    },
+    "listed-buildings": {
+      "label": "Specialist Property Insurance",
+      "members": [
+        "thatched-roof-insurance",
+        "non-standard-construction",
+        "timber-framed-buildings",
+        "farmhouses"
+      ]
+    },
+    "buildings-insurance": {
+      "label": "Buildings & Contents Cover",
+      "members": [
+        "contents-insurance",
+        "home-emergency-cover",
+        "jewellery-and-valuables",
+        "shed-insurance"
+      ]
+    },
+    "holiday-home-insurance": {
+      "label": "Holiday & Second Home Insurance",
+      "members": [
+        "holiday-let-insurance",
+        "second-home-insurance",
+        "airbnb-home-insurance"
+      ]
+    },
+    "flooding-and-home-insurance": {
+      "label": "Home Insurance & Natural Risks",
+      "members": [
+        "subsidence-and-home-insurance",
+        "radon-in-homes"
+      ]
+    },
+    "do-i-need-home-insurance": {
+      "label": "Home Insurance Guides & Costs",
+      "members": [
+        "first-time-buyer-guide-to-buildings-insurance",
+        "how-much-does-home-insurance-cost",
+        "mistakes-when-moving-house",
+        "salary-to-buy"
+      ]
+    }
+  },
+  "motorbike-insurance": {
+    "new-riders": {
+      "label": "New & Learner Rider Insurance",
+      "members": [
+        "learner-and-new-riders",
+        "125cc",
+        "125cc-policies",
+        "50cc-policies",
+        "motorbike-and-moped-licences",
+        "advanced-motorcycle-training"
+      ]
+    },
+    "classic-motorbikes": {
+      "label": "Specialist Bike Insurance",
+      "members": [
+        "imported-bikes",
+        "scooter-insurance",
+        "quad-bikes",
+        "sidecars",
+        "off-road-motorbike-insurance"
+      ]
+    },
+    "motorbike-security-and-your-insurance": {
+      "label": "Motorbike Ownership & Security",
+      "members": [
+        "motorbike-modifications-and-your-insurance",
+        "sorn-my-bike",
+        "is-my-bike-insured",
+        "motorcycle-mot",
+        "helmet-and-leather-cover"
+      ]
+    },
+    "how-much-does-motorbike-insurance-cost": {
+      "label": "Motorbike Insurance Costs & Savings",
+      "members": [
+        "cheapest-motorbikes-to-insure",
+        "groups",
+        "multi-bike-insurance"
+      ]
+    }
+  }
+}

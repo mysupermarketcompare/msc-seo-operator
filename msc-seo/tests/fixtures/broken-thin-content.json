@@ -1,0 +1,34 @@
+{
+  "keyword": "van insurance self employed",
+  "url": "/van-insurance/self-employed",
+  "title": "Van Insurance Self Employed",
+  "description": "Compare van insurance.",
+  "h1": "Van Insurance",
+  "sections": [
+    {
+      "id": "intro",
+      "heading": null,
+      "content": "Compare van insurance quotes for self-employed workers."
+    },
+    {
+      "id": "cta",
+      "heading": "Compare Now",
+      "content": "Get a quote today.",
+      "cta": {
+        "text": "Compare Van Insurance",
+        "url": "/van-insurance/now"
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much is van insurance?",
+      "answer": "It varies."
+    }
+  ],
+  "compliance": {
+    "seopa": true,
+    "disclaimerRequired": true,
+    "notes": "Standard attribution."
+  }
+}

@@ -1,0 +1,20 @@
+london
+manchester
+birmingham
+leeds
+glasgow
+liverpool
+sheffield
+bristol
+edinburgh
+nottingham
+leicester
+coventry
+cardiff
+belfast
+reading
+oxford
+cambridge
+milton keynes
+brighton
+plymouth

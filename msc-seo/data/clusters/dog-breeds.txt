@@ -1,0 +1,10 @@
+labrador
+french bulldog
+german shepherd
+golden retriever
+cockapoo
+dachshund
+staffordshire bull terrier
+border collie
+cocker spaniel
+chihuahua

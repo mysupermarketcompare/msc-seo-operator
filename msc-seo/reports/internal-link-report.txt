@@ -1,0 +1,17 @@
+Internal Linking Validation Report
+Date: 2026-03-14 22:46:29
+=============================================
+
+Total pages scanned:        177
+Broken links found:         0
+Broken links repaired:      0
+Pages with 3+ outbound:     177/177
+Pages with >5 outbound:     2
+Outbound link range:        3–6
+Self-links:                 0
+Duplicate links:            0
+Orphan pages (0 inbound):   0
+Total links generated:      875
+
+Issues:
+  WARN: 2 pages exceed 5 outbound links

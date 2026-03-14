@@ -1,0 +1,95 @@
+{
+  "keyword": "home insurance flood risk",
+  "url": "/home-insurance/flood-risk",
+  "pageFamily": "home-insurance/risk",
+  "title": "Home Insurance for Flood Risk Areas — Compare Quotes | MySupermarketCompare",
+  "description": "Compare home insurance quotes for properties in flood risk areas from UK providers.",
+  "h1": "Compare Home Insurance for Flood Risk Areas",
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "content": "If your property is in an area with a higher risk of flooding, finding suitable home insurance can be more challenging. Some insurers may charge higher premiums or exclude flood damage from their policies. By comparing quotes from multiple UK providers, you can explore the options available for your property and find a policy that offers the protection you need at a price that works for your household budget."
+    },
+    {
+      "id": "why-flood-risk-matters",
+      "heading": "Why Does Flood Risk Affect Home Insurance?",
+      "content": "Insurers assess the risk of flooding when calculating your home insurance premium. Properties in areas identified as higher flood risk by the Environment Agency may face higher premiums because the likelihood of a flood-related claim is greater. The type of flooding that could affect your property matters too, whether it is river flooding, surface water flooding, or coastal flooding. Each type carries different risks and may be assessed differently by insurers."
+    },
+    {
+      "id": "flood-re-scheme",
+      "heading": "The Flood Re Scheme Explained",
+      "content": "Flood Re is a joint initiative between the UK government and the insurance industry designed to make home insurance more affordable for properties at high risk of flooding. Under Flood Re, insurers can pass the flood risk element of a home insurance policy to Flood Re, which helps keep premiums more manageable for homeowners. The scheme applies to residential properties built before January 2009 and council tax bands A to H in England, Scotland, and Wales."
+    },
+    {
+      "id": "what-to-look-for",
+      "heading": "What to Look for in Flood Risk Home Insurance",
+      "content": "When comparing home insurance for a flood risk property, consider these important factors:",
+      "bullets": [
+        "Whether flood damage is included in the buildings and contents cover",
+        "The excess amount for flood-related claims specifically",
+        "Whether the policy covers alternative accommodation if your home becomes uninhabitable",
+        "The claims process for flood damage and how quickly the insurer responds",
+        "Whether the insurer participates in the Flood Re scheme",
+        "Cover limits for buildings and contents and whether they are adequate for your property"
+      ]
+    },
+    {
+      "id": "reduce-risk",
+      "heading": "Steps to Help Reduce Your Flood Risk and Premiums",
+      "content": "Taking steps to protect your property from flooding can help reduce the impact of a flood and may also help with insurance costs:",
+      "bullets": [
+        "Install flood barriers or flood gates at entry points to your property",
+        "Use water-resistant materials for ground floor finishes where possible",
+        "Ensure your property has adequate drainage and that drains are kept clear",
+        "Sign up for flood warnings from the Environment Agency for your area",
+        "Move valuable items and electrical sockets above likely flood levels",
+        "Consider a property flood resilience survey to identify improvements"
+      ]
+    },
+    {
+      "id": "how-to-compare",
+      "heading": "How to Compare Home Insurance for Flood Risk Properties",
+      "content": "Comparing quotes is straightforward even for flood risk properties. Enter your property details including your postcode, property type, and the level of cover you need. Our comparison tool will search a panel of UK home insurance providers and return quotes you can review side by side. This allows you to compare not just prices but also the specific flood cover terms each insurer offers."
+    },
+    {
+      "id": "compare-cta",
+      "heading": "Compare Home Insurance Quotes for Your Property",
+      "content": "Ready to explore your options? Use the comparison tool to get home insurance quotes from a panel of UK providers. Whether your property is in a flood risk area or not, comparing quotes helps you find the right level of cover at a competitive price.",
+      "cta": {
+        "text": "Compare Home Insurance Quotes",
+        "url": "/home-insurance/now"
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I get home insurance if my property is in a flood risk area?",
+      "answer": "Yes. While it may be more challenging, many insurers offer home insurance for flood risk properties. The Flood Re scheme also helps make cover more affordable for eligible properties. Comparing quotes helps you find suitable options."
+    },
+    {
+      "question": "What is Flood Re and does my property qualify?",
+      "answer": "Flood Re is a government-backed scheme that helps make home insurance more affordable for high flood risk properties. It applies to residential properties built before January 2009 in England, Scotland, and Wales."
+    },
+    {
+      "question": "Will my premium be higher if I live in a flood risk area?",
+      "answer": "Properties in flood risk areas may face higher premiums due to the increased likelihood of flood-related claims. However, the Flood Re scheme and comparing multiple quotes can help you find more affordable options."
+    },
+    {
+      "question": "What should I do if my home floods?",
+      "answer": "Contact your insurer as soon as possible to start the claims process. Document the damage with photographs, and follow your insurer's guidance on emergency repairs and temporary accommodation if needed."
+    },
+    {
+      "question": "How can I check if my property is in a flood risk area?",
+      "answer": "You can check flood risk for your property using the Environment Agency's online flood risk tool. Enter your postcode to see the level of risk from rivers, surface water, and coastal flooding in your area."
+    }
+  ],
+  "compliance": {
+    "seopa": true,
+    "disclaimerRequired": true,
+    "notes": "Standard Seopa/Quotezone attribution required."
+  },
+  "internalLinks": [
+    { "text": "Compare home insurance quotes", "url": "/home-insurance" }
+  ]
+}

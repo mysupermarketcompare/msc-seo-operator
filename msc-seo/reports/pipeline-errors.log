@@ -1,0 +1,7 @@
+[2026-03-14 16:33:06] [UNEXPECTED] Pipeline crashed at line 36 (exit code 1)
+[2026-03-14 16:56:53] [UNEXPECTED] Pipeline crashed at line 211 (exit code 141)
+[2026-03-14 17:01:46] [page-generation] Template script failed for 4x4 vehicles
+[2026-03-14 17:20:09] [pre-deploy] sitemap.xml missing or empty at /Users/adamtaylor/MSCINSURANCE-1/sitemap.xml
+[2026-03-14 17:20:09] [pre-deploy] Pre-deployment validation failed — aborting git publish
+[2026-03-14 17:25:43] [page-generation] Template script failed for 4x4 vehicles
+[2026-03-14 19:47:45] [page-generation] Template script failed for 4x4 vehicles
