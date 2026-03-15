@@ -1,10 +1,20 @@
-labrador
-french bulldog
-german shepherd
-golden retriever
-cockapoo
-dachshund
-staffordshire bull terrier
-border collie
-cocker spaniel
-chihuahua
+Labrador
+French Bulldog
+German Shepherd
+Golden Retriever
+Bulldog
+Poodle
+Beagle
+Rottweiler
+Dachshund
+Border Collie
+Chihuahua
+Cocker Spaniel
+Shih Tzu
+Pug
+Great Dane
+Boxer
+Siberian Husky
+Doberman
+Maltese
+Staffordshire Bull Terrier

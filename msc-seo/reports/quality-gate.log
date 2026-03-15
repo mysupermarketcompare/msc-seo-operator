@@ -1,6 +1,11 @@
-Quality gate log — Sat Mar 14 19:47:45 GMT 2026
-PASS: pet-insurance-insuring-an-older-pet.json
-PASS: pet-insurance-out-of-hours-emergency-vet-bills.json
-PASS: pet-insurance-pet-microchipping.json
-PASS: pet-insurance-pet-passport.json
-PASS: pet-insurance-safety-in-hot-weather.json
+Quality gate log — Sun Mar 15 22:04:27 UTC 2026
+PASS: travel-insurance-school-fines.json
+PASS: travel-insurance-lost-and-found-qr-code-generator.json
+PASS: travel-insurance-travel-vaccination-checker.json
+PASS: travel-insurance-cuba.json
+PASS: travel-insurance-argentina.json
+PASS: travel-insurance-austria.json
+PASS: travel-insurance-bali.json
+PASS: travel-insurance-belgium.json
+PASS: travel-insurance-brazil.json
+PASS: travel-insurance-bulgaria.json

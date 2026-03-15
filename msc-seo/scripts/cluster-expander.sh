@@ -1,5 +1,13 @@
 #!/bin/bash
 
+AGENT_PLAN="../data/agent-plan.json"
+
+AGENT_CLUSTERS=""
+
+if [ -f "$AGENT_PLAN" ]; then
+  AGENT_CLUSTERS=$(jq -r '.expand_clusters[]' "$AGENT_PLAN" 2>/dev/null)
+fi
+
 # ===============================================
 # Cluster Expansion Engine
 # ===============================================
@@ -138,37 +146,39 @@ expand_vertical() {
 # that make sense for that insurance type.
 # -----------------------------------------------
 
-echo "Expanding car insurance (cities + ages)..."
-expand_vertical "car insurance" "$CLUSTERS/cities-uk.txt"
-SEEDS_PROCESSED=$((SEEDS_PROCESSED + 1))
-expand_vertical "car insurance" "$CLUSTERS/ages.txt"
-SEEDS_PROCESSED=$((SEEDS_PROCESSED + 1))
+if echo "$AGENT_CLUSTERS" | grep -q "car-insurance"; then
+  echo "Expanding car insurance (cities + ages)..."
+  expand_vertical "car insurance" "$CLUSTERS/cities-uk.txt"
+  SEEDS_PROCESSED=$((SEEDS_PROCESSED + 1))
+  expand_vertical "car insurance" "$CLUSTERS/ages.txt"
+  SEEDS_PROCESSED=$((SEEDS_PROCESSED + 1))
+fi
 
-if [ "$GENERATED" -lt "$MAX_CLUSTER_EXPANSIONS" ]; then
+if [ "$GENERATED" -lt "$MAX_CLUSTER_EXPANSIONS" ] && echo "$AGENT_CLUSTERS" | grep -q "home-insurance"; then
   echo "Expanding home insurance (cities)..."
   expand_vertical "home insurance" "$CLUSTERS/cities-uk.txt"
   SEEDS_PROCESSED=$((SEEDS_PROCESSED + 1))
 fi
 
-if [ "$GENERATED" -lt "$MAX_CLUSTER_EXPANSIONS" ]; then
+if [ "$GENERATED" -lt "$MAX_CLUSTER_EXPANSIONS" ] && echo "$AGENT_CLUSTERS" | grep -q "van-insurance"; then
   echo "Expanding van insurance (cities)..."
   expand_vertical "van insurance" "$CLUSTERS/cities-uk.txt"
   SEEDS_PROCESSED=$((SEEDS_PROCESSED + 1))
 fi
 
-if [ "$GENERATED" -lt "$MAX_CLUSTER_EXPANSIONS" ]; then
+if [ "$GENERATED" -lt "$MAX_CLUSTER_EXPANSIONS" ] && echo "$AGENT_CLUSTERS" | grep -q "motorbike-insurance"; then
   echo "Expanding motorbike insurance (ages)..."
   expand_vertical "motorbike insurance" "$CLUSTERS/ages.txt"
   SEEDS_PROCESSED=$((SEEDS_PROCESSED + 1))
 fi
 
-if [ "$GENERATED" -lt "$MAX_CLUSTER_EXPANSIONS" ]; then
+if [ "$GENERATED" -lt "$MAX_CLUSTER_EXPANSIONS" ] && echo "$AGENT_CLUSTERS" | grep -q "pet-insurance"; then
   echo "Expanding pet insurance (dog breeds)..."
   expand_vertical "pet insurance" "$CLUSTERS/dog-breeds.txt"
   SEEDS_PROCESSED=$((SEEDS_PROCESSED + 1))
 fi
 
-if [ "$GENERATED" -lt "$MAX_CLUSTER_EXPANSIONS" ]; then
+if [ "$GENERATED" -lt "$MAX_CLUSTER_EXPANSIONS" ] && echo "$AGENT_CLUSTERS" | grep -q "travel-insurance"; then
   echo "Expanding travel insurance (destinations)..."
   expand_vertical "travel insurance" "$CLUSTERS/travel-destinations.txt"
   SEEDS_PROCESSED=$((SEEDS_PROCESSED + 1))

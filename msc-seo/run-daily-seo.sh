@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+WORKSPACE="$HOME/.openclaw/workspace/msc-seo/msc-seo"
+
+source "$WORKSPACE/venv/bin/activate"
+
+cd "$WORKSPACE"
+
 set -a
 if [ -f ".env" ]; then
   source .env
@@ -8,22 +15,31 @@ set +a
 
 set -euo pipefail
 
-"$HOME/.openclaw/workspace/msc-seo/scripts/telegram-notify.sh" "MSC SEO Operator started — $(date)" || true
+WORKSPACE="$HOME/.openclaw/workspace/msc-seo/msc-seo"
+SITE="$HOME/MSCINSURANCE-1"
+
+"$WORKSPACE/scripts/telegram-notify.sh" "MSC SEO Operator started"
+
+echo "======================================="
+echo "Running SEO Operator Agent..."
+echo "======================================="
+
+python scripts/seo-operator-agent.py
+
+echo "======================================="
+echo "Agent completed. Starting pipeline..."
+echo "======================================="
 
 echo "======================================="
 echo "Starting MySupermarketCompare SEO operator"
 echo "Time: $(date)"
 echo "======================================="
 
-WORKSPACE="$HOME/.openclaw/workspace/msc-seo"
-SITE="$HOME/MSCINSURANCE-1"
-
 # -----------------------------------------------
 # Error logging infrastructure
 # -----------------------------------------------
 mkdir -p "$WORKSPACE/reports"
 ERROR_LOG="$WORKSPACE/reports/pipeline-errors.log"
-
 log_error() {
   local step="$1"
   local msg="$2"

@@ -1,14 +1,20 @@
-spain
-france
-italy
-greece
-portugal
-thailand
-turkey
-dubai
-usa
-canada
-japan
-australia
-mexico
-bali
+Spain
+France
+Italy
+Portugal
+Greece
+Turkey
+Thailand
+USA
+Canada
+Australia
+New Zealand
+Japan
+Dubai
+UAE
+India
+Mexico
+Brazil
+South Africa
+Egypt
+Morocco
