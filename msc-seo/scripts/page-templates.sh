@@ -28,6 +28,8 @@ VERTICAL_TITLE="$5"
 
 python3 - "$VERTICAL_SLUG" "$KEYWORD" "$URL_PATTERN" "$KW_TITLE" "$VERTICAL_TITLE" << 'PYTHON_SCRIPT'
 import json
+import os
+import subprocess
 import sys
 
 vertical_slug = sys.argv[1]
@@ -1142,5 +1144,106 @@ if builder is None:
     sys.exit(1)
 
 page = builder(keyword, url_pattern, kw_title, vertical_title, vertical_slug)
+
+
+# -----------------------------------------------
+# AI Content Enhancement
+# -----------------------------------------------
+# Attempt to replace template text with AI-generated
+# content. Falls back silently to the template if the
+# AI generator is unavailable or fails.
+# -----------------------------------------------
+
+def merge_ai_content(page, ai):
+    """Merge AI-generated content into the template page structure."""
+    sections = page.get("sections", [])
+
+    # Replace introduction content
+    if ai.get("intro"):
+        for s in sections:
+            if s.get("id") == "introduction":
+                s["content"] = ai["intro"]
+                break
+
+    # Replace matching sections by ID, collect extras
+    extra_sections = []
+    protected_ids = {"introduction", "how-to-compare", "compare-cta"}
+
+    for ai_sec in ai.get("sections", []):
+        sec_id = ai_sec.get("id", "")
+        if not sec_id or sec_id in protected_ids:
+            continue
+
+        matched = False
+        for s in sections:
+            if s.get("id") == sec_id:
+                if ai_sec.get("heading"):
+                    s["heading"] = ai_sec["heading"]
+                if ai_sec.get("content"):
+                    s["content"] = ai_sec["content"]
+                if "bullets" in ai_sec:
+                    s["bullets"] = ai_sec["bullets"]
+                matched = True
+                break
+
+        if not matched:
+            new_sec = {
+                "id": sec_id,
+                "heading": ai_sec.get("heading", ""),
+                "content": ai_sec.get("content", ""),
+            }
+            if "bullets" in ai_sec:
+                new_sec["bullets"] = ai_sec["bullets"]
+            extra_sections.append(new_sec)
+
+    # Insert extra sections before compare-cta
+    if extra_sections:
+        cta_idx = next(
+            (i for i, s in enumerate(sections) if s.get("id") == "compare-cta"),
+            len(sections),
+        )
+        for i, es in enumerate(extra_sections):
+            sections.insert(cta_idx + i, es)
+        page["sections"] = sections
+
+    # Replace FAQs but keep the comparison process FAQ
+    ai_faqs = ai.get("faq", [])
+    if ai_faqs and len(ai_faqs) >= 5:
+        comparison_faq = None
+        for faq in page.get("faq", []):
+            if "comparison process" in faq.get("question", "").lower():
+                comparison_faq = faq
+                break
+        page["faq"] = ai_faqs
+        if comparison_faq:
+            page["faq"].append(comparison_faq)
+
+    return page
+
+
+workspace = os.path.expanduser("~/.openclaw/workspace/msc-seo")
+ai_script = os.path.join(workspace, "scripts", "ai-content-generator.py")
+
+if os.path.isfile(ai_script) and os.environ.get("CLAUDE_API_KEY"):
+    try:
+        result = subprocess.run(
+            ["python3", ai_script, keyword, vertical_slug],
+            capture_output=True, text=True, timeout=90,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            ai_content = json.loads(result.stdout)
+            page = merge_ai_content(page, ai_content)
+            print("AI content enhancement: OK", file=sys.stderr)
+        else:
+            stderr_msg = result.stderr.strip().split("\n")[0] if result.stderr else "unknown"
+            print(f"AI content enhancement failed ({stderr_msg}), using template", file=sys.stderr)
+    except subprocess.TimeoutExpired:
+        print("AI content enhancement timed out, using template", file=sys.stderr)
+    except (json.JSONDecodeError, Exception) as e:
+        print(f"AI content enhancement error ({e}), using template", file=sys.stderr)
+else:
+    if not os.environ.get("CLAUDE_API_KEY"):
+        print("CLAUDE_API_KEY not set, using template content", file=sys.stderr)
+
 print(json.dumps(page, indent=2))
 PYTHON_SCRIPT
